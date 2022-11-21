@@ -43,3 +43,36 @@ console.log('Proje açıldı!')
 
 
 /* Kodlar Buradan aşağıya */
+
+let anchors=document.querySelectorAll("a");
+for(let i=0;i<anchors.length;i++){
+  anchors[i].classList.add("italic");
+  let key=`nav-item-${i+1}`;
+  anchors[i].textContent=siteContent["nav"][key];
+}/*en üst linkler*/
+document.querySelector("#logo-img").setAttribute("src",siteContent["images"]["logo-img"]); /*sağ üst logo*/
+
+document.querySelector("h1").textContent=siteContent["cta"]["h1"];/*Ana başlık*/
+document.querySelector("button").textContent=siteContent["cta"]["button"];/*baslık buttom*/
+document.querySelector("#cta-img").setAttribute("src",siteContent["images"]["cta-img"]);/*Baslık resim*/
+
+let govdeBasliklar=document.querySelectorAll("h4");
+for(let i=0;i<govdeBasliklar.length;i++){
+  let key=`nav-item-${i+1}`;
+  govdeBasliklar[i].textContent=siteContent["nav"][key];
+}
+document.querySelector(".middle-img").setAttribute("src",siteContent["images"]["accent-img"]);
+let tumP=document.querySelectorAll("p");
+tumP[0].textContent=siteContent["ana-içerik"]["özellikler-içerik"];
+tumP[1].textContent=siteContent["ana-içerik"]["hakkımızda-içerik"];
+tumP[2].textContent=siteContent["ana-içerik"]["servisler-içeriği"];
+tumP[3].textContent=siteContent["ana-içerik"]["ürünler-içeriği"];
+tumP[4].textContent=siteContent["ana-içerik"]["vizyon-içeriği"];
+tumP[5].textContent=siteContent["iletisim"]["adres"];
+tumP[6].textContent=siteContent["iletisim"]["telefon"];
+tumP[7].textContent=siteContent["iletisim"]["email"];
+
+
+
+
+
